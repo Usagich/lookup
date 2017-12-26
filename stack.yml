@@ -1,0 +1,12 @@
+---
+- name: Vagrant Provision
+  connection: local
+  hosts: localhost
+
+  vars:
+    trying: "{{ lookup('file', '/usr/bin/ansible') }}"
+
+  tasks:  
+
+    - debug: msg="Is there default ansible path? {{ trying }}"
+
